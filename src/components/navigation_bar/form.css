@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 600px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+}
+
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  outline: 0;
+  border: 0;
+  padding: 2px 150px;
+  font-size: 20px;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
