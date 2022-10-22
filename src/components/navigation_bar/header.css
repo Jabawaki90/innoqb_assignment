@@ -9,7 +9,7 @@
   position: fixed;
 }
 
-img {
+.navbar_container .logo {
   height: 80%;
   border-radius: 50%;
 }
