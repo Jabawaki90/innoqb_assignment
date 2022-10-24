@@ -10,7 +10,8 @@ const Header = () => {
     <div className="navbar_container">
       <img className="logo" src="/innoqb_img.jpg" alt="Logo" />
       <Form />
-      <div className="container">
+
+      <div className="icon_main_container">
         <a className="icon_container" href="https://www.facebook.com">
           <FavoriteBorderIcon className="icon" />
           <h4>Wish Lists</h4>

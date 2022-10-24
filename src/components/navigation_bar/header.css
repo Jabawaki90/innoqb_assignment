@@ -14,7 +14,9 @@
   border-radius: 50%;
 }
 
-.container {
+.icon_main_container {
+  max-width: 300px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }

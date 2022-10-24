@@ -1,8 +1,10 @@
 .card-container {
   border: 1px solid grey;
+  border-radius: 10px;
   background-color: white;
   width: 250px;
-  height: auto;
+  height: 420px;
+  margin: 15px;
 }
 .card-container .card-element-container {
   margin: 15px;
@@ -14,6 +16,8 @@
 .img-container {
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .image-style {
@@ -52,4 +56,50 @@
   padding: 0px;
   padding: 0px 10px;
   font-size: small;
+  justify-content: flex-start;
+}
+
+.price {
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+.discounted {
+  margin-left: 5px;
+  font-weight: bold;
+  color: red;
+}
+
+.from {
+  color: grey;
+}
+
+.discount_tag {
+  background-color: pink;
+  font-size: small;
+  border-radius: 10px;
+  position: absolute;
+  padding: 5px;
+  margin: 15px 0 0 15px;
+}
+
+.radio-container {
+  display: flex;
+
+  margin: 2px;
+  padding: 0px 10px;
+}
+
+#radio-dark {
+  accent-color: #000000;
+  background-color: #000000;
+  color: #000000;
+}
+
+.prev {
+  transform: translateX(270px);
+}
+
+.next {
+  transform: translateX(-270px);
 }

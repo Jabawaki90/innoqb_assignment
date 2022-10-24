@@ -1,20 +1,21 @@
-.container {
+/* .search_main_container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.search-bar {
-  width: 600px;
+.search_bar {
+  max-width: 600px;
+  width: 100%;
   background: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-radius: 60px;
   padding: 10px 20px;
 }
 
-.search-bar input {
+.search_bar input {
   background: transparent;
   flex: 1;
   outline: 0;
@@ -23,8 +24,14 @@
   font-size: 20px;
 }
 
-.search-bar button {
+.search_bar button {
   border: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .search_bar {
+    display: none;
+  }
 }

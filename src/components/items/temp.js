@@ -33,8 +33,25 @@ const Pagination_items = (props) => {
   }, []);
 
   return (
-    <div className="main_container">
-      <div className="card_container">
+    <div className="pagination_container">
+      <Swiper
+        reloadImages={true}
+        slidesPerView={5}
+        spaceBetween={5}
+        slidesPerGroup={1}
+        loop={true}
+        centeredSlides={true}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        navigation={{
+          nextE1: ".swiper-button-next",
+        }}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
         {item_list.map((item) => {
           const {
             id,
@@ -51,7 +68,7 @@ const Pagination_items = (props) => {
           } = item;
 
           return (
-            <div>
+            <SwiperSlide>
               <Item
                 key={id}
                 id={id}
@@ -66,10 +83,10 @@ const Pagination_items = (props) => {
                 thumbnail={thumbnail}
                 title={title}
               />
-            </div>
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
     </div>
   );
 };
