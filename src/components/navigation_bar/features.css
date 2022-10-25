@@ -1,36 +1,53 @@
-.features_main_container{
-    /* background-color: aquamarine; */
-    width:200px;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 30px;
+.features_main_container {
+  /* background-color: aquamarine; */
+  width: fit-content;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
 }
 
-
-
-.features_single_container{
-    display:flex;
-    width: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    
+.features_single_container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
 
-.features_single_container h4{
-    width: max-content;
-    text-align: center;
-    color: white;
-    margin: 5px;
-    
+.person:hover {
+  font-size: larger;
+}
+
+.features_single_container h4 {
+  width: max-content;
+  text-align: center;
+  color: white;
+  margin: 5px;
 }
 /* 
 .features_single_container .text_container{
     width: 65px;
 } */
 
+.cart_number_sign {
+  /* background-color: aqua; */
+}
 
+.number {
+}
 
+.number_container {
+  /* width: 10px;
+  height: 10px;
+  background-color: burlywood;
+  padding: 2px;
+  border-radius: 100%; */
+}
+
+ion-icon {
+  font-size: 32px;
+  padding: 5px;
+}

@@ -2,15 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./pagination_items.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
-// import required modules
-import { Pagination, Navigation } from "swiper";
+// // import required modules
+// import { Pagination, Navigation } from "swiper";
+
+import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 
 import Card from "../UIElement/card";
 import Item from "./item";
@@ -34,6 +37,9 @@ const Pagination_items = (props) => {
 
   return (
     <div className="main_container">
+      <button>
+        <ArrowCircleLeftOutlinedIcon />
+      </button>
       <div className="card_container">
         {item_list.map((item) => {
           const {
@@ -70,6 +76,9 @@ const Pagination_items = (props) => {
           );
         })}
       </div>
+      <button>
+        <ArrowCircleRightOutlinedIcon />
+      </button>
     </div>
   );
 };

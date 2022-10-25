@@ -1,8 +1,9 @@
 .card-container {
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   border-radius: 10px;
   background-color: white;
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   height: 420px;
   margin: 15px;
 }
@@ -75,12 +76,36 @@
 }
 
 .discount_tag {
-  background-color: pink;
+  background-color: blanchedalmond;
   font-size: small;
   border-radius: 10px;
   position: absolute;
-  padding: 5px;
-  margin: 15px 0 0 15px;
+  left: 0.1px;
+  bottom: 100px;
+  padding: 10px;
+  color: red;
+
+  /* margin: 15px 0 0 15px; */
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+.add_to_cart_button {
+  width: 90%;
+  padding: 10px 0 10px 0;
+  border-radius: 35px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.add_to_cart_button:hover {
+  background-color: turquoise;
+  cursor: pointer;
 }
 
 .radio-container {

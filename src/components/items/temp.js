@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./pagination_items.css";
+import "./temp.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -35,12 +35,24 @@ const Pagination_items = (props) => {
   return (
     <div className="pagination_container">
       <Swiper
-        reloadImages={true}
-        slidesPerView={5}
-        spaceBetween={5}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+
+          868: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1400: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        }}
+        freeMode={true}
         slidesPerGroup={1}
-        loop={true}
-        centeredSlides={true}
+        loop={false}
         grabCursor={true}
         pagination={{
           clickable: true,
@@ -48,6 +60,7 @@ const Pagination_items = (props) => {
         }}
         navigation={{
           nextE1: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper"

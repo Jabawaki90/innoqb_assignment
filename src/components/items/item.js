@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./item.css";
 import { Rating } from "@mui/material";
 import { grey, lightGreen, blueGrey, orange } from "@mui/material/colors";
+import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
 
 const Item = ({ ...props }) => {
   const discountedPrice = (
@@ -37,10 +38,18 @@ const Item = ({ ...props }) => {
           <p className="discounted">{`$${discountedPrice}`}</p>
         </div>
         <div className="radio-container">
-          <input id="radio-dark" type="radio" />
-          <input className="radio-lightgreen" type="radio" />
-          <input className="radio-grey" type="radio" />
-          <input className="radio-orange" type="radio" />
+          <CircleTwoToneIcon style={{ color: "#000" }} />
+          <CircleTwoToneIcon style={{ color: "#43a047" }} />
+          <CircleTwoToneIcon style={{ color: "#616161" }} />
+          <CircleTwoToneIcon style={{ color: "#ffa726" }} />
+        </div>
+        <div className="button_container">
+          <button
+            className="add_to_cart_button"
+            onClick={() => console.log("hello world")}
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
