@@ -10,8 +10,9 @@
 }
 
 .navbar_container .logo {
-  height: 80%;
-  border-radius: 50%;
+  height: 60%;
+  border-radius: 5px;
+  margin: 0 30px;
 }
 
 .icon_main_container {
@@ -37,4 +38,8 @@
 
 a {
   text-decoration: none;
+}
+
+.navbar_container .navbar_single_container{
+  margin: 15px;
 }
