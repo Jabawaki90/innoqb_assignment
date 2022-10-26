@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./item.css";
 import { Rating } from "@mui/material";
 import { grey, lightGreen, blueGrey, orange } from "@mui/material/colors";
 import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
+import CartContext from '../../context.js'
 
 const Item = ({ ...props }) => {
+  const {addCartHandler} = useContext(CartContext)
+
+  
   const discountedPrice = (
     props.price -
     (props.discounted / 100) * props.price
   ).toFixed(2);
+
+  // const addToCart_handler = (e)=>{
+  //   e.preventDefault()
+  //   console.log(data)
+  // }
 
   return (
     <div className="card-container">
@@ -46,7 +55,7 @@ const Item = ({ ...props }) => {
         <div className="button_container">
           <button
             className="add_to_cart_button"
-            onClick={() => console.log("hello world")}
+            onClick={addCartHandler}
           >
             Add To Cart
           </button>

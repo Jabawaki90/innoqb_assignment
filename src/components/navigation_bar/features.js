@@ -1,40 +1,41 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./features.css";
-
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import CartContext from "../../context";
+import { faBullseye, faLessThanEqual } from "@fortawesome/free-solid-svg-icons";
 
 const Features = (props) => {
+
+  const {totalCart} = useContext(CartContext)
+  const [cart, setCart] = useState(false)
+  
+
+  useEffect(()=>{
+    setCart(true)
+  }, [totalCart])
+
   return (
     <div className="features_main_container">
-      <div className="features_single_container">
-        {/* <FavoriteBorderIcon fontSize="large" style={{ color: "yellow" }} /> */}
+      <div className="features_single_container wishlist">
         <div className="icon_container">
           <ion-icon name="heart-outline"></ion-icon>
         </div>
         <h4>Whish List</h4>
       </div>
       <div className="features_single_container">
-        {/* <PersonOutlineOutlinedIcon
-          className="person"
-          fontSize="large"
-          style={{ color: "yellow" }}
-        /> */}
+        
         <div className="icon_container">
-          <ion-icon name="person-outline"></ion-icon>
+          <ion-icon name="person-outline" icon></ion-icon>
         </div>
         <h4>Sign In</h4>
       </div>
       <div className="features_single_container">
-        {/* <ShoppingCartOutlinedIcon
-          fontSize="large"
-          style={{ color: "yellow" }}
-        /> */}
+        
         <div className="icon_container cart_number_sign">
+          {totalCart > 0 && 
           <div className="number_container">
-            <p className="number">0</p>
+            <p className="number">{totalCart}</p>
           </div>
+          }
           <ion-icon name="cart-outline"></ion-icon>
         </div>
         <h4>Cart</h4>
