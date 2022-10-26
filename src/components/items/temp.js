@@ -12,9 +12,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-import Card from "../UIElement/card";
 import Item from "./item";
-import axios from "axios";
 
 const DUMMY_LIST_API = "https://dummyjson.com/products";
 

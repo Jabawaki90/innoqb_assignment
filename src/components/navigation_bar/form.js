@@ -4,8 +4,6 @@ import "./form.css";
 
 const Form = (props) => {
   return (
-    // <div className="search_main_container">
-
     <form className="search_bar" action="submit">
       <input
         className="search_input"
@@ -17,7 +15,6 @@ const Form = (props) => {
         <SearchIcon className="search_icon" />
       </button>
     </form>
-    // </div>
   );
 };
 

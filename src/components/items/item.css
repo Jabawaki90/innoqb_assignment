@@ -1,5 +1,4 @@
 .card-container {
-  /* border: 1px solid grey; */
   border-radius: 10px;
   background-color: white;
   max-width: 250px;
@@ -15,10 +14,6 @@
 }
 
 .img-container {
-  /* display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative; */
   position: relative;
   height: 150px;
   width: 450px;
@@ -119,7 +114,6 @@ img.top:hover {
   padding: 10px;
   color: red;
   z-index: 1;
-  /* margin: 15px 0 0 15px; */
 }
 
 .button_container {

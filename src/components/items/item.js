@@ -1,14 +1,11 @@
-import React, { useEffect, useState, useContext, useRef } from "react";
+import React, { useContext } from "react";
 import "./item.css";
 import { Rating } from "@mui/material";
 import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
 import CartContext from "../../context.js";
-import HoverImage from "react-hover-image";
 
 const Item = ({ ...props }) => {
   const { addCartHandler } = useContext(CartContext);
-
-  const imageRef = useRef(null);
 
   const discountedPrice = (
     props.price -
@@ -21,28 +18,7 @@ const Item = ({ ...props }) => {
         <div className="img-container">
           <button className="quick">Quick View</button>
           <h4 className="discount_tag">{props.discounted} %</h4>
-          {/* <HoverImage
-            className="image-style"
-            src={props.thumbnail}
-            hoverSrc={props.images[1]}
-            effect="fadeIn"
-          /> */}
-          {/* <img
-            className="image-style"
-            src={props.thumbnail}
-            alt={props.title}
-            onMouseOver={() => {
-              if (props.images.length > 1) {
-                imageRef.current.src = props.images[1];
-              } else {
-                imageRef.current.src = props.thumbnail;
-              }
-            }}
-            onMouseOut={() => {
-              imageRef.current.src = props.thumbnail;
-            }}
-            ref={imageRef}
-          /> */}
+
           <img
             className="image-style bottom"
             src={props.images[0]}
