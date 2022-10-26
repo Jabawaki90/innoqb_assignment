@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./item.css";
 import { Rating } from "@mui/material";
-import { grey, lightGreen, blueGrey, orange } from "@mui/material/colors";
 import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
 import CartContext from '../../context.js'
 
 const Item = ({ ...props }) => {
   const {addCartHandler} = useContext(CartContext)
-
+  const [imgHover, setImgHover] = useState('1st_image')
   
   const discountedPrice = (
     props.price -
@@ -19,16 +18,22 @@ const Item = ({ ...props }) => {
   //   console.log(data)
   // }
 
+ 
+    
   return (
     <div className="card-container">
       <div className="card-element-container">
-        <div className="img-container">
+        <div className="img-container" >
           <h4 className="discount_tag">{props.discounted} %</h4>
-          <img
+          
+            
+            <img
             className="image-style"
             src={props.thumbnail}
             alt={props.title}
-          />
+            /> 
+            
+          
         </div>
         <div className="rating-container">
           <Rating
