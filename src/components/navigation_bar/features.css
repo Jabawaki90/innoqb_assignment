@@ -45,11 +45,10 @@
   align-items: center;
   width: 25px;
   height: 25px;
-  background-color:dodgerblue;
+  background-color: dodgerblue;
   z-index: 2;
   /* padding: 2px; */
   border-radius: 100%;
-  
 }
 
 ion-icon {
@@ -57,18 +56,12 @@ ion-icon {
   padding: 5px;
 }
 
-ion-icon:hover{
-  
+ion-icon:hover {
   font-size: 40px;
 }
 
-@media (max-width: 600px) {
-  .features_main_container{
-    display:none;
+@media (max-width: 800px) {
+  .features_main_container {
+    display: none;
   }
-
- 
 }
-
-
-

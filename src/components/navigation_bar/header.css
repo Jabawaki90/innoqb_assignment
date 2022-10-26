@@ -45,34 +45,31 @@ a {
   margin: 15px;
 }
 
-.icons_container{
-  display:none;
+.icons_container {
+  display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .logo {
     display: none;
   }
 
-  .navbar_container{
-    justify-content:space-between;
+  .navbar_container {
+    justify-content: space-between;
     background-color: white;
   }
 
-  .icons_container{
+  .icons_container {
     display: flex;
     justify-content: center;
     max-width: 100px;
     width: 100%;
     margin: 10px;
-    
   }
 
-  .icon-main-container{
+  .icon-main-container {
     margin: 0 70px;
     display: flex;
     /* background-color: aqua; */
   }
-
- 
 }

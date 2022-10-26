@@ -1,39 +1,58 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useRef } from "react";
 import "./item.css";
 import { Rating } from "@mui/material";
 import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
-import CartContext from '../../context.js'
+import CartContext from "../../context.js";
+import HoverImage from "react-hover-image";
 
 const Item = ({ ...props }) => {
-  const {addCartHandler} = useContext(CartContext)
-  const [imgHover, setImgHover] = useState('1st_image')
-  
+  const { addCartHandler } = useContext(CartContext);
+
+  const imageRef = useRef(null);
+
   const discountedPrice = (
     props.price -
     (props.discounted / 100) * props.price
   ).toFixed(2);
 
-  // const addToCart_handler = (e)=>{
-  //   e.preventDefault()
-  //   console.log(data)
-  // }
-
- 
-    
   return (
     <div className="card-container">
       <div className="card-element-container">
-        <div className="img-container" >
+        <div className="img-container">
+          <button className="quick">Quick View</button>
           <h4 className="discount_tag">{props.discounted} %</h4>
-          
-            
-            <img
+          {/* <HoverImage
+            className="image-style"
+            src={props.thumbnail}
+            hoverSrc={props.images[1]}
+            effect="fadeIn"
+          /> */}
+          {/* <img
             className="image-style"
             src={props.thumbnail}
             alt={props.title}
-            /> 
-            
-          
+            onMouseOver={() => {
+              if (props.images.length > 1) {
+                imageRef.current.src = props.images[1];
+              } else {
+                imageRef.current.src = props.thumbnail;
+              }
+            }}
+            onMouseOut={() => {
+              imageRef.current.src = props.thumbnail;
+            }}
+            ref={imageRef}
+          /> */}
+          <img
+            className="image-style bottom"
+            src={props.images[0]}
+            alt={props.title}
+          />
+          <img
+            className="image-style top"
+            src={props.thumbnail}
+            alt={props.title}
+          />
         </div>
         <div className="rating-container">
           <Rating
@@ -58,10 +77,7 @@ const Item = ({ ...props }) => {
           <CircleTwoToneIcon style={{ color: "#ffa726" }} />
         </div>
         <div className="button_container">
-          <button
-            className="add_to_cart_button"
-            onClick={addCartHandler}
-          >
+          <button className="add_to_cart_button" onClick={addCartHandler}>
             Add To Cart
           </button>
         </div>

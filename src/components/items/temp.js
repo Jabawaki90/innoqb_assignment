@@ -81,7 +81,7 @@ const Pagination_items = (props) => {
           } = item;
 
           return (
-            <SwiperSlide>
+            <SwiperSlide key={id}>
               <Item
                 key={id}
                 id={id}
